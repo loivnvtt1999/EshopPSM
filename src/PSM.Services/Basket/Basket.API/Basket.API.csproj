@@ -9,7 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
     <PackageReference Include="Carter" Version="8.0.0" />
-	<PackageReference Include="Marten" Version="7.37.3" />
+	  <PackageReference Include="Marten" Version="7.37.3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>

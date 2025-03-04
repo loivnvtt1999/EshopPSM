@@ -1,5 +1,3 @@
-
-using Basket.API.Data;
 using Marten;
 
 namespace Basket.API
@@ -18,6 +16,7 @@ namespace Basket.API
                 config.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
             builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+            builder.Services.AddScoped<IBasketRepository, CachedBasketRepository>();
 
             //Data Services
             builder.Services.AddMarten(opts =>
