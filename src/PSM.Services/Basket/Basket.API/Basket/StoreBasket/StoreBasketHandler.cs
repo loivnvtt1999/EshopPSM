@@ -9,8 +9,7 @@ namespace Basket.API.Basket.StoreBasket
         public async Task<StoreBasketResult> Handle(StoreBasketCommand command, CancellationToken cancellationToken)
         {
             ShoppingCart cart = command.Cart;
-            throw new NotImplementedException();
-            return new StoreBasketResult("");
+            return new StoreBasketResult("swn");
         }
     }
 }

@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
     <PackageReference Include="Carter" Version="8.0.0" />
+	<PackageReference Include="Marten" Version="7.37.3" />
   </ItemGroup>
 
   <ItemGroup>
