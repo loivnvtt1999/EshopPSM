@@ -1,4 +1,7 @@
 
+using Basket.API.Data;
+using Marten;
+
 namespace Basket.API
 {
     public class Program
@@ -14,6 +17,14 @@ namespace Basket.API
                 config.AddOpenBehavior(typeof(ValidationBehavior<,>));
                 config.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
+            builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+
+            //Data Services
+            builder.Services.AddMarten(opts =>
+            {
+                opts.Connection(builder.Configuration.GetConnectionString("Database")!);
+                opts.Schema.For<ShoppingCart>().Identity(x => x.UserName);
+            }).UseLightweightSessions();
 
             var app = builder.Build();
             app.MapCarter();
