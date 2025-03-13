@@ -18,7 +18,7 @@ namespace Ordering.Application
                 config.AddOpenBehavior(typeof(ValidationBehavior<,>));
                 config.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
-
+            
             //services.AddFeatureManagement();
             //services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
