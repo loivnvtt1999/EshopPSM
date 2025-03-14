@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.Models
 {
-    public class Product : Entity<Guid>
+    public class Product : Entity<ProductId>
     {
         public string Name { get; private set; } = default!;
         public decimal Price { get; private set; } = default!;
@@ -19,7 +19,7 @@ namespace Ordering.Domain.Models
 
             var product = new Product
             {
-                Id = id,
+                Id = ProductId.Of(Guid.NewGuid()),
                 Name = name,
                 Price = price
             };

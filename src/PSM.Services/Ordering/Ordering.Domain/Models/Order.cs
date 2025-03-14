@@ -21,7 +21,7 @@
         {
             var order = new Order
             {
-                Id = id,
+                Id = OrderId.Of(Guid.NewGuid()),
                 CustomerId = customerId,
                 OrderName = orderName,
                 ShippingAddress = shippingAddress,
